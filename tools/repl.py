@@ -150,8 +150,7 @@ class SparkSQL(System):
         return [count]
 
     def query(self, sql):
-        result = self.spark.sql(sql).collect()
-        return result
+        return self.spark.sql(sql).collect()
 
 
 def run(cmd):
